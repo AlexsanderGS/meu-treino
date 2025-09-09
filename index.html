@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/styles.css">
+
+    <title>Minha Rotina de Treino</title>
+</head>
+
+<body>
+
+    <main class="content">
+        <h1 class="title">
+            Minha Rotina de Treino
+        </h1>
+
+        <p class="description">
+            Adicione e organize seus treinos diários para acompanhar seu progresso.
+        </p>
+
+        <section class="days_of_week">
+            <label>
+                <input type="radio" name="day" value="Monday" checked>
+                Segunda-feira
+            </label>
+            <label>
+                <input type="radio" name="day" value="Tuesday">
+                Terça-feira
+            </label>
+            <label>
+                <input type="radio" name="day" value="Wednesday">
+                Quarta-feira
+            </label>
+            <label>
+                <input type="radio" name="day" value="Thursday">
+                Quinta-feira
+            </label>
+            <label>
+                <input type="radio" name="day" value="Friday">
+                Sexta-feira
+            </label>
+            <label>
+                <input type="radio" name="day" value="Saturday">
+                Sábado
+            </label>
+            <label>
+                <input type="radio" name="day" value="Sunday">
+                Domingo
+            </label>
+            <label>
+                <input type="radio" name="day" value="all_days">
+                Todos
+            </label>
+        </section>
+
+        <section class="exercise_area">
+            <form class="input_form">
+                <input type="text" placeholder="Adicionar novo exercício">
+                <input type="number" placeholder="Carga (Kg)">
+                <input type="text" placeholder="Tempo de descanso">
+                <button type="submit" class="btn_input"> Adicionar</button>
+            </form>
+
+            <div class="table_exercise">
+                <table class="table" border="1">
+                    <tr>
+                        <th>Exercício</th>
+                        <th>Series e Repetições</th>
+                        <th>Carga</th>
+                        <th>Tempo de Descanso</th>
+                    </tr>
+                    <tr>
+                        <td>Supino com Halteres</td>
+                        <td>4x10</td>
+                        <td>20Kg</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr>
+                        <td>Supino Inclinado Barra</td>
+                        <td>4x10</td>
+                        <td>15Kg</td>
+                        <td>2 min</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
