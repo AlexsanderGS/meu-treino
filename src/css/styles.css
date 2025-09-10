@@ -41,3 +41,44 @@
 .days_of_week label:hover {
     background-color: #e0e0e0;
 }
+
+/* Estilizando a área de exercícios como um todo */
+.exercise_area {
+    margin-top: 40px;
+}
+
+/* Estilizando o formulário */
+.input_form {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+/* Estilizando os campos de entrada */
+.input_form input {
+    flex-grow: 1; /* Faz os campos crescerem para ocupar o espaço disponível */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilizando o botão "Adicionar" */
+.input_form .btn_input {
+    padding: 12px 25px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito de hover no botão */
+.input_form .btn_input:hover {
+    background-color: #45a049;
+}
