@@ -21,7 +21,7 @@
             Adicione e organize seus treinos diários para acompanhar seu progresso.
         </p>
 
-        <section class="days_of_week">
+        <section class="days_of_week" id="days_of_week">
             <label>
                 <input type="radio" name="day" value="Monday">
                 Segunda-feira
@@ -57,56 +57,61 @@
         </section>
 
         <section class="exercise_area">
-            <form class="input_form">
-                <input type="text" placeholder="Adicionar novo exercício">
-                <input type="number" placeholder="Carga (Kg)">
-                <input type="text" placeholder="Tempo de descanso">
+            <form class="input_form" id="exercise_form">
+                <input type="text" placeholder="Adicionar novo exercício" id="exercise_name">
+                <input type="number" placeholder="Carga (Kg)" id="load_weight">
+                <input type="text" placeholder="Tempo de descanso" id="rest_time">
                 <button type="submit" class="btn_input"> Adicionar</button>
             </form>
 
-            <div class="table_exercise">
+            <div class="table_exercise" id="exercise_table">
                 <table class="table" border="1">
-                    <tr>
-                        <th>Exercício</th>
-                        <th>Series e Repetições</th>
-                        <th>Carga</th>
-                        <th>Tempo de Descanso</th>
-                    </tr>
-                    <tr>
-                        <td>Supino com Halteres</td>
-                        <td>4x10</td>
-                        <td>20Kg</td>
-                        <td>2 min</td>
-                    </tr>
-                    <tr>
-                        <td>Supino Inclinado Barra</td>
-                        <td>4x10</td>
-                        <td>15Kg</td>
-                        <td>2 min</td>
-                    </tr>
-                    <tr>
-                        <td>Supino Inclinado Barra</td>
-                        <td>4x10</td>
-                        <td>15Kg</td>
-                        <td>2 min</td>
-                    </tr>
-                    <tr>
-                        <td>Supino Inclinado Barra</td>
-                        <td>4x10</td>
-                        <td>15Kg</td>
-                        <td>2 min</td>
-                    </tr>
-                    <tr>
-                        <td>Supino Inclinado Barra</td>
-                        <td>4x10</td>
-                        <td>15Kg</td>
-                        <td>2 min</td>
-                    </tr>
+                    <tbody id="tbody">
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Series e Repetições</th>
+                            <th>Carga</th>
+                            <th>Tempo de Descanso</th>
+                        </tr>
+                        <tr>
+                            <td>Supino com Halteres</td>
+                            <td>4x10</td>
+                            <td>20Kg</td>
+                            <td>2 min</td>
+                        </tr>
+                        <tr>
+                            <td>Supino Inclinado Barra</td>
+                            <td>4x10</td>
+                            <td>15Kg</td>
+                            <td>2 min</td>
+                        </tr>
+                        <tr>
+                            <td>Supino Inclinado Barra</td>
+                            <td>4x10</td>
+                            <td>15Kg</td>
+                            <td>2 min</td>
+                        </tr>
+                        <tr>
+                            <td>Supino Inclinado Barra</td>
+                            <td>4x10</td>
+                            <td>15Kg</td>
+                            <td>2 min</td>
+                        </tr>
+                        <tr>
+                            <td>Supino Inclinado Barra</td>
+                            <td>4x10</td>
+                            <td>15Kg</td>
+                            <td>2 min</td>
+                        </tr>
                 </table>
+                </tbody>
             </div>
         </section>
 
     </main>
+
+
+    <script src="src/scritp/script.js"></script>
 </body>
 
 </html>
