@@ -4,11 +4,31 @@ const exerciseForm = document.getElementById('exercise_form');
 const daysOfWeekSection = document.getElementById('days_of_week');
 const exerciseTable = document.getElementById('exercise_table');
 
+const clearTableBtn = document.getElementById('clear_table_btn');
+
 // Obter os campos de entrada (serão usados depois)
 const exerciseInput = document.getElementById('exercise_name'); 
 const loadInput = document.getElementById('load_weight'); 
 const restInput = document.getElementById('rest_time');
 const seriesInput = document.getElementById('series');
+
+// Função para carregar os exercícios do localStorage
+function loadExercises() {
+    // 1. Pega os dados salvos com a chave 'gym_data'
+    const savedData = localStorage.getItem('gym_data');
+
+    // 2. Se houver dados, converte a string de volta para um objeto JavaScript
+    if (savedData) {
+        // Usa Object.assign para copiar os dados carregados para o objeto 'allExercises'
+        Object.assign(allExercises, JSON.parse(savedData));
+    }
+}
+
+// Função para salvar o objeto de exercícios no localStorage
+function saveExercises() {
+    // Converte o objeto JavaScript em uma string JSON e a salva
+    localStorage.setItem('gym_data', JSON.stringify(allExercises));
+}
 
 // 2. Estrutura de dados para armazenar os exercícios
 // Começamos com dados estáticos, será substituido por um array vazio para o projeto final.
@@ -19,7 +39,7 @@ const allExercises = {
     Thursday: [],
     Friday: [],
     Saturday: [],
-    Sunday: []
+    Sunday: [],
 };
 
 // Função para exibir os exercícios na tabela
@@ -56,6 +76,7 @@ function displayExercises(day) {
 // Seleciona todos os botões de rádio
 const daySelectors = document.querySelectorAll('input[name="day"]');
 
+
 // Adiciona um "ouvinte" de eventos para cada botão de rádio
 daySelectors.forEach(selector => {
     selector.addEventListener('change', function(event) {
@@ -65,8 +86,6 @@ daySelectors.forEach(selector => {
         displayExercises(selectedDay);
     });
 });
-
-displayExercises('all_days');
 
 // Adiciona um "ouvinte" para a submissão do formulário
 exerciseForm.addEventListener('submit', function(event) {
@@ -106,4 +125,24 @@ exerciseForm.addEventListener('submit', function(event) {
     seriesInput.value = '';
     loadInput.value = '';
     restInput.value = '';
+    
+    saveExercises();
 });
+
+
+// 2. Adicione um "ouvinte" de eventos para o clique no botão
+clearTableBtn.addEventListener('click', function() {
+    // 3. Limpe a sua estrutura de dados
+    for (const day in allExercises) {
+        if (allExercises.hasOwnProperty(day)) {
+            allExercises[day] = [];
+        }
+    }
+
+    // 4. Salve a mudança no localStorage
+    saveExercises();
+
+    // 5. Atualize a tabela na tela, que agora estará vazia
+    displayExercises('all_days');
+});
+

@@ -83,6 +83,21 @@
     background-color: #45a049;
 }
 
+#clear_table_btn {
+    padding: 12px 25px;
+    border: none;
+    background-color: #f44336; /* Uma cor vermelha para "perigo" ou "limpar" */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#clear_table_btn:hover {
+    background-color: #da190b;
+}
+
 /* Estilizando o contêiner da tabela */
 .table_exercise {
     display: flex;
