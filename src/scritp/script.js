@@ -17,9 +17,13 @@ const allExercises = {
         { name: 'Supino Inclinado Barra', series: '4x10', load: '15kg', rest: '2 min' }
     ],
     Tuesday: [
-        { name: 'Agachamento Livre', series: '5x5', load: '60kg', rest: '3 min' }
+        { name: 'Supino com Halteres', series: '4x10', load: '20kg', rest: '2 min' },
+        { name: 'Supino Inclinado Barra', series: '4x10', load: '15kg', rest: '2 min' }
     ],
-    Wednesday: [], // Exemplo de um dia sem treinos
+    Wednesday: [
+        { name: 'Supino com Halteres', series: '4x10', load: '20kg', rest: '2 min' },
+        { name: 'Supino Inclinado Barra', series: '4x10', load: '15kg', rest: '2 min' }
+    ], // Exemplo de um dia sem treinos
     // Adicionar outros dias aqui
 };
 
